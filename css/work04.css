@@ -1,0 +1,434 @@
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
+
+*{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    
+}
+body {
+    /* background: #ddd; */
+    /* background: linear-gradient( -45deg,rgb(81, 6, 242), #c91a1a); */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Roboto","ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.mau{
+    background: linear-gradient( -45deg,rgb(81, 6, 242), #c91a1a);
+    height: 1000px;
+
+}
+header{
+    width: auto;
+    border: groove gold 10px;
+    background: rgb(110, 245, 252);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #E3E38D, #AE8DE3);
+    background-size: 400% 400%;
+    animation: gradient 13s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+h1{
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    line-height: 15px;
+    padding: 15px;
+    text-shadow: 5px 5px 5px rgb(78, 72, 72);
+}
+
+
+
+
+
+.thumb {
+    width: 500px;
+    height: 500px;
+    /* margin: 70px auto; */
+    margin:0 auto;
+
+    /* chiều sâu của vật */
+    perspective: 1000px;  
+}
+
+.thumb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-size: 0, cover;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    /* border: 1px solid red; */
+    /* background-color: bisque; */
+    animation:
+        setAnimation 20s cubic-bezier(0.5, 0.79, 0.45, 1.01) infinite alternate;   
+}
+
+@keyframes setAnimation{
+    0%{
+        background: #8DE0E3;
+    }
+    20%{
+        background:#E3B28D;
+    }
+    40%{
+        background: #E38D8D;
+    }
+    60%{
+        background: #E3E38D;
+    }
+    80%{
+        background: #AE8DE3;
+    }
+    100%{
+        background: #E3DD8D;
+    }
+}
+
+
+#anh{
+    width:500px;
+    height:500px;
+}
+.thumb:hover a{
+    
+    /* Định nghĩa một phép quay 3D dọc theo trục X*/
+    /* transform: rotateX(80deg); */
+    transform: rotateX(80deg);
+    /* xác định lại chiều cao và chiều rộng cho thành phần                                                           */
+    transform-origin: bottom;
+}
+.thumb a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: inherit;
+    background-size: cover, cover;
+    background-position: bottom;
+    transform: rotateX(90deg);
+    transform-origin:bottom;
+}
+.thumb a span {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px rgb(84, 78, 78);
+    text-transform: uppercase;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width:500px;
+    height:40px;
+    font: bold 12px/36px "Open Sans";
+    text-align: center;
+    transform: rotateX(-89.99deg);
+    transform-origin: top;
+    /* z-index là thứ tự xếp chồng của 1 thành phần */
+    z-index: 2;
+    background: rgb(110, 245, 252);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #E3E38D, #AE8DE3);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.thumb a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    opacity: 0.1;
+    transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+    transform-origin: bottom;
+    
+}
+
+.thumb:hover a:before {
+    opacity:1;
+    box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+    transform: rotateX(0) translateZ(-60px) scale(0.85);
+    
+}
+.btnWrap{
+    width: 100%;
+    height: 500px;
+    margin: 50px 0;
+}
+.btn{
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    background: #ff6347;
+    float: left;
+    position: relative;
+    margin: 50px 0;
+}
+
+.btn a{
+   font-size:20px;
+   text-align: center;
+   width: 70%;
+   height: 50px;
+   color: white;
+   border: 1px solid wheat;
+   position: absolute;
+   display: block;
+   bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height:40px;
+}
+a:link, a:visited{
+    text-decoration: none;
+}
+.btn a:hover{
+    background: #ffffff;
+    color: #c91a1a;
+    transition: 0.3s ease-in;
+}
+
+
+.btnLink{
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    background: #ff6347;
+    float: left;
+    position: relative;
+    margin: 50px 0;
+    background: #8DE0E3;
+}
+.btnLink a{
+    background: url(../img/03_icon_arrow.png)110% center no-repeat;
+    font-size:20px;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    color: white;
+    border: 1px solid wheat;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    top: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+     line-height: 40px;
+     transition: all 0.3s ease-in-out;
+ }
+
+.btnLink a:hover{
+    letter-spacing:20px;
+    background-position: 95% center;
+    
+}
+
+ /* @keyframes btnLink{
+     0%{
+        letter-spacing:10px;
+    }
+    100%{
+        letter-spacing: initial;
+    }
+ } */
+
+ /* .btnWrap .btnLink a::after{
+     background:url("../img/03_icon_arrow.png")110% center no-repeat;
+     width:20px;
+     height: 20px;
+
+ } */
+
+ a:link, a:visited{
+     text-decoration: none;
+ }
+
+ .btnLink:hover{
+     background: #9461e1;
+     color: #c91a1a;
+     transition: 0.3s ease-in;
+ }
+
+
+.content{
+    height: 1000px;
+    margin: 20px 0;
+    padding: 0 20px;
+    border-top: dotted 1px #333;
+    background: white;
+}
+
+.contentTtl{
+    margin: 20px 0;
+    font-size: 15px;
+    transform: translateX(-600px);
+}
+
+
+/* image*/
+.cardWrap{
+    width: 270px;
+    height: 400px;
+    border: 1px solid #efefef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.cardWrap:hover{
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.247);
+}
+
+.cardImgWrap{
+    width: 100%;
+    height: 180px;
+    background: url("../img/04_img_bk.png") left top/100% no-repeat;
+    position: relative;
+}    
+
+.cardImgInnerWrap{
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px rgba(10,10,10,0.4);
+    transform: translateY(135px);
+
+}
+.cardImgInnerWrap img{
+    width: 100%;
+    height: 100%;
+}
+/* text */
+.cardWrap .cardInnerWrap{
+    padding: 20px;
+    margin-top:20px ;
+}
+
+.cardWrap .cardInnerWrap .cardTtl {
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+}
+h2{
+    font-size: 18px;
+    text-align: center;
+}
+
+.cardText{
+    padding: 20px 0;
+}
+p{
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Box3D */
+.exWrap{
+    width: 100%;
+    height: 800px;
+    margin: 20px 0;
+    padding: 20px 0;
+    border: dotted 1px #333;
+}
+
+.exBox{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 200px;
+    left: 500px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: exRotate 15s infinite;
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(0);
+    transition: .4s;
+}
+
+@keyframes exRotate{
+    0%{
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+.exBox .front{
+    background: red;
+    z-index: 1;
+    transform: translateX(200px) rotateY(90deg);
+}
+.exBox .ex{
+    /* background: url(../img/sample4_background_img.png) center center no-repeat; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* border: solid 1px rgb(0, 0, 0); */
+    box-shadow: inset 0 0 30px rgba(125,125,125,0.8);
+    background: rgb(230, 230, 230);
+}
+.exBox .ex_front{
+    z-index: 10;
+    transform: translateZ(200px);
+}
+
+.exBox .ex_right{
+    z-index: 1;
+    transform: translateX(200px) rotateY(90deg);
+}
+
+.exBox .ex_left{
+    transform: translateX(-200px) rotateY(-90deg);
+}
+
+.exBox .ex_back{
+    transform: translateZ(-200px) rotateY(180deg);
+}
+
+.exBox .ex_top{
+    transform: translateY(-200px) rotateX(90deg) rotateY(0);
+    transform-origin: right center;
+    transition: .6s cubic-bezier(0.55, 1, 0.52, 0.11);
+}
+
+.exBox .ex_bottom{
+    transform: translateY(200px) rotateX(-90deg);
+}
+.exBox:hover>.ex_top{
+    transform:translateY(-200px) rotateX(90deg) rotateY(200deg)
+}

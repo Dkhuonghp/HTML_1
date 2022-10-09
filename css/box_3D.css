@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    width:1000px;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 580px;
+    transition: all 5s;
+    background:linear-gradient(to top right ,rgb(102, 0, 255)10%,red);
+}
+body:hover{
+    perspective: 1500px;
+}
+.wrapper{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transition: all 7s;
+    transform: rotateZ(0) rotateX(0) rotateY(0);
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 2 , 3, 45deg);
+    
+}
+.wrapper:hover{
+    transform: rotateZ(-360deg) rotateX(360deg) rotateY(360deg);
+    /* animation: 0.3s linear infinite; */
+}
+.wrapper div{
+      /* background-image:url("../img/sample4_background_img.png") ; */
+}
+
+
+.box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+    /* opacity:0.5; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    /* animation: animate infinite; */
+    
+}
+
+/* left */
+.box:nth-child(1){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center left;
+    transform: rotateY(90deg) translateX(-150px);
+}
+
+/* right */
+.box:nth-child(2){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center right;
+    transform: rotateY(-90deg) translateX(150px);
+}
+
+/* top */
+.box:nth-child(3){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center top;
+    transform: rotateX(-90deg) translateY(-150px);
+}
+
+/* bottom */
+.box:nth-child(4){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(150px);
+}
+
+/* pack */
+.box:nth-child(5){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform:translateZ(-150px);
+}
+
+/* front */
+.box:nth-child(6){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform:rotateZ(0) translateZ(150px);
+}
+
+

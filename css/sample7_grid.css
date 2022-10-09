@@ -1,0 +1,78 @@
+.ttl{
+  font-size: 1.4rem;
+  margin: 20px;
+}
+h2.ttl{
+  background: #333;
+  color: #FFF;
+  padding: 10px 20px;
+}
+.wrapFit section,
+.wrapFill section
+{
+  margin: 20px;  
+}
+section{
+  border: solid 1px #333;
+}
+
+/*
+sample7_grid
+4列 4行のグリッドレイアウトの作成
+*/
+
+.wrapGrid{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 500px 250px 250px;
+  grid-template-rows: 300px 300px 300px;
+  
+}
+
+#gridA{
+  grid-column: 1/2;
+  grid-row: 1/4;
+  
+}
+#gridB{
+  grid-column: 2/4;
+  grid-row: 1/2;
+  
+}
+#gridC{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#gridD{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  
+}
+#gridE{
+  grid-column: 2/4;
+  grid-row: 3/4;
+  
+}
+
+/*
+sample7_grid_2
+autoFit , autoFillを使ったレイアウト
+*/
+
+.wrapFit{
+  margin: 20px;
+  padding: 20px;
+  border: dotted 1px #999;
+  display: grid;
+  grid-template-columns: repeat(auto-Fit,minmax(400px,1fr));
+  
+}
+
+.wrapFill{
+  margin: 20px;
+  padding: 20px;
+  border: dotted 1px #999;
+  display: grid;
+  grid-template-columns: repeat(auto-Fill,minmax(400px,1fr));
+  gap: 40px;
+}

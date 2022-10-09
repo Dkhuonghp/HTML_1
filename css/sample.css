@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 800px;
+    height: auto;
+
+}
+.header{
+    background-color: red;
+    width: 800px;
+    height: 20px;
+    float: left;
+}
+.left{
+    background-color:mediumorchid;
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.container{
+    background-color:green;
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+.right{
+    background-color:rgb(206, 252, 0);
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.footer{
+    background-color: bisque;
+    width: 800px;
+    height: 20px;
+    clear: both;
+}

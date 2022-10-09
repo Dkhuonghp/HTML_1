@@ -1,0 +1,108 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+header{
+    background: #333;
+    padding: 1rem;
+}
+h1{
+    color: #fff;
+    font-size: 18px;
+}
+main {
+    width: 100%;
+}
+main #navWrap {
+    width: 1000px;
+    height: 400px;
+    margin: 200px auto;
+}
+.nav {
+    width: 100%;
+    background: #333;
+}
+.nav>li:first-child{
+    background: tomato;
+    border-left: none;
+    width: 80px;
+}
+ul{
+    list-style: none;
+}
+main .nav>li {
+    color: #FFF;
+    background: #00152E;
+    width: 200px;
+    height: 50px;
+    float: left;
+    border-left: solid 1px #3D4F5A;
+}
+.nav>li a{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    line-height: 5;
+    width: 100%;
+    height: 100%;
+   
+}
+.nav>li a:link, .nav>li a:visited{
+    color:white;
+    text-decoration: none;
+}
+.nav>li a:hover{
+    background: #333;
+}
+.nav>li .navChild {
+    display: none;
+}
+.nav>li:hover .navChild{
+    display: block;
+
+}
+.navChild>li a:hover{
+    background: #eee;
+    color: #333;
+}
+.nav>li .navChild li {
+    width: 100%;
+    background: #333;
+    border-bottom: dotted 1px #999;
+    border-left: none;
+}
+.nav>li .navChild>li {
+    position: relative;
+}
+main .nav>li .navChild>li>.navChild {
+    display: none;
+    width: 100%;
+    position: absolute;
+
+}
+main .nav>li .navChild>li>.navChild li {
+    background: #666;
+    border-bottom: dotted 1px #999;
+}
+main .nav>li .navChild>li:hover .navChild {
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 100%;
+}
+
+
+
+

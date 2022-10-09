@@ -1,0 +1,47 @@
+@charset "UTF8";
+/* body{
+    background-color:slategrey;
+} */
+.sample3_1 section> p{
+    color:tomato;
+}
+.sample3_2 section h2 + p{
+    color:tomato;
+}
+.sample3_3 section h2~p{
+    color:tomato;
+}
+
+.smaple3_4 input[type="text"]{
+    color:tomato;
+}
+.sample3_4 a[href^="#"]{
+    font-size:20px;
+    border:1px solid red;
+}
+
+.sample3_5 li:last-child{
+    color:red;
+}
+.sample3_6 li:nth-child(even){
+    background: tomato;
+}
+.sample3_6 li:nth-child(odd){
+    background: skyblue;
+}
+.sample3_8 p:nth-of-type(even){
+    background: red;
+}
+.sample3_8 p:nth-of-type(odd){
+    background: skyblue;
+}
+.sample3_7 li:nth-child(even){
+    background: red;
+}
+.sample3_7 li:nth-child(odd){
+    background:skyblue;
+}
+
+
+
+
